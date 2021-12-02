@@ -1,0 +1,317 @@
+/*====================
+=======Structure======
+======================*/
+
+body{
+    background-color: hsl(226, 63%, 50%);
+    display:flex; 
+    flex-direction:column;    
+    margin: 1em auto;
+    min-height: 100vh;
+    width: 90%;
+}
+
+header{
+    display: flex;
+    height: 10vh;
+    justify-content: space-between;
+}
+
+main{
+    margin: 1em 0;
+    width: 100%;
+}
+
+footer{
+    margin-top: auto; 
+    width: 100%;
+}
+
+.main-element{
+    margin-bottom: 2em;
+}
+
+.footer-element{
+    margin-bottom: 1em;
+}
+
+/*====================
+======Typography======
+======================*/
+
+h1, h2, h3, h4, h5, h6, a, p{
+    color: hsl(0, 0%, 100%);
+}
+
+h1, h2, h3, h4, a, td, p, button {
+    font-family: "Montserrat";
+}
+
+h5, h6 {
+    font-family: "Ubuntu";
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+h4 {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a {
+    -webkit-transition: 300ms;
+    -moz-transition: 300ms;
+    -o-transition: 300ms;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 300ms;
+}
+
+a:focus, a:hover {
+    outline: none;
+    outline-offset: 0;
+    text-decoration: none;
+}
+
+/*====================
+=========Logo=========
+======================*/
+
+.logo{
+    width: max-content;
+}
+
+.logo svg{
+    height: 3em;
+    width: 3em;
+}
+
+.logo svg path{
+    fill:hsl(41, 98%, 60%);
+}
+
+/*====================
+========Menu=========
+======================*/
+
+.menu svg{
+    height: 3em;
+    width: 3em;
+}
+
+.menu:hover svg{
+    cursor: pointer;
+}
+
+.menu svg path{
+    fill:hsl(41, 98%, 60%);
+}
+   
+.menu:hover svg path {
+    fill: hsl(226, 63%, 25%);
+}
+
+/*====================
+========Title=========
+======================*/
+
+.title{
+    margin-left: 1em;
+}
+
+.title h1{
+    text-align: left;
+}
+
+/*====================
+========Subtitle======
+======================*/
+
+.subtitle{
+    background-color: hsl(207, 85%, 69%);
+    padding: 0.2em 0;
+    width: 100%;
+}
+
+.subtitle h2{
+    text-align: center;
+}
+
+/*====================
+=========TABS=========
+======================*/
+
+.tabs {
+    margin: 0;
+    background: rgb(126, 126, 126);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 8vh;
+}
+
+.tabs button.tablinks {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    width: 20%;
+    height: 8vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+    font-family: "Ubuntu+Condensed";
+    overflow: hidden;
+}
+
+button.tablinks.active {
+    background-color: hsl(216, 50%, 48%);  
+}
+
+.tabcontent {
+    display: none;
+    min-height: 11em;
+    
+}
+
+.tabcontent.active {
+
+    transition: all 1s ease;
+    display: block;
+}
+
+/*====================
+=========CRUD=========
+======================*/
+
+.crud{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;  
+}
+
+.crud__form .crud__form-element .crud__form-one-column{
+    width: 100%;
+}
+
+.crud__table, .crud__form{ 
+    font-family:'Open Sans', sans-serif;;
+    color:hsl(0, 0%, 100%);
+    border-collapse: collapse;
+    width: 100%;
+    padding: 8px;
+    text-align: center;
+    font-weight: 800;
+    font-size: 120%;
+}
+
+.crud__form input{
+    width: 100%;
+    text-align: center;
+}
+.crud__form-element, .crud__form-element-lable{
+    margin: 0.5em;
+}
+    
+.crud__form-four-columns{
+    display: flex;
+    flex-direction: row;
+}
+
+.crud__form .crud__form-element .crud__form-four-columns{
+    width: 24%;
+}
+
+.crud__form .crud__form-element .crud__form-four-columns input{
+    border-radius: 0.5em;
+}
+
+
+.crud__form-three-columns{
+    display: flex;
+    flex-direction: row;
+    margin: 1em 0;
+}
+.crud__form .crud__form-element .crud__form-three-columns{
+    width: 32%;
+}
+.crud__form-two-columns{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 1em 0;
+    justify-content:space-between;
+}
+
+.crud__form-two-columns input{
+    width: auto;
+}
+
+.crud__form .crud__form-element .crud__form-two-columns{
+    width: 49%;
+}
+
+.crud__form-one-column{
+    display: flex;
+    flex-direction: row;
+}
+
+.crud__form .crud__form-one-column .crud__form-element{
+    width: 100%;
+}
+
+
+.crud__form-one-column .crud__form-element textarea{
+    width: 100%;
+    border-radius: 0.5em;
+}
+
+/*====================
+========TABLE=========
+======================*/
+
+.crud__table td,.crud__table th { 
+    border: 0.1em solid hsl(0, 0%, 100%);
+    text-align: left;
+    padding: 0.2em; 
+}
+/*Para texto que expande la tabla*/
+.crud__table td{
+    max-width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.crud__table tr:nth-child(even){
+    background-color:hsl(226, 85%, 62%);
+}
+
+/*====================
+========FOOTER========
+======================*/
+
+.footer-element{
+    width: 100%;
+}
+
+.footer-element p{
+    text-align: center;
+}
+
+.author p:hover{
+    color: hsl(41, 98%, 60%);
+}
+

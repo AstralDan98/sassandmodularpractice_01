@@ -1,0 +1,11 @@
+.footer-element{
+    width: 100%;
+    
+    p{
+        text-align: center; 
+
+        &:hover{
+            color: $color-secondary;
+        }
+    }
+}

@@ -1,0 +1,40 @@
+.tabs {
+   margin: 0;
+   background: $color-grey;
+   display: flex;
+   justify-content: left;
+   align-items: center;
+   height: 8vh;
+}
+
+.tabs button.tablinks {
+   background: transparent;
+   border: none;
+   outline: none;
+   cursor: pointer;
+   width: 20%;
+   height: 8vh;
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1em;
+   font-family: $main-font-condensed;
+   overflow: hidden;
+}
+
+button.tablinks.active {
+   background-color: $color-background;  
+}
+
+.tabcontent {
+   display: none;
+   min-height: 11em;
+   
+}
+
+.tabcontent.active {
+
+   transition: all 1s ease;
+   display: block;
+}

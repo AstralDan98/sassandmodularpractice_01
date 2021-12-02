@@ -1,0 +1,15 @@
+.menu{ 
+    svg{
+    height: 3em;
+    width: 3em;
+    
+        &:hover{
+            cursor: pointer;
+            fill: $color-primary-lighter;
+        }
+
+        & path{
+            fill: $color-secondary;
+        }
+    }
+}

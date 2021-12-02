@@ -1,0 +1,95 @@
+.crud{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;  
+}
+
+.crud__form{ 
+ 
+    input{
+        width: 100%;
+        text-align: center;
+    }
+
+    
+    .crud__form-element, .crud__form-element-lable{
+        margin: 0.5em;
+    }
+    
+    .crud__form-four-columns{
+        display: flex;
+        flex-direction: row;
+        width: 24%;
+        
+        input{
+            border-radius: 0.5em;
+        }
+    }
+
+    .crud__form-three-columns{
+        display: flex;
+        flex-direction: row;
+        margin: 1em 0;
+        width: 32%;
+    }
+
+    .crud__form-two-columns{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        margin: 1em 0;
+        width: 49%;
+        justify-content:space-between;
+        
+        input{
+            width: auto;
+        }
+    }
+
+    .crud__form-one-column{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        font-family: $main-font;
+        color: $color-white;
+        border-collapse: collapse;
+        padding: 0.5em;
+        text-align: center;
+        font-weight: 800;
+        font-size: 120%;
+        
+        textarea{
+            width: 100%;
+            border-radius: 0.5em;
+        }
+    }
+
+    .crud__table{ 
+
+        font-family: $main-font;
+        color: $color-white;
+        border-collapse: collapse;
+        width: 100%;
+        padding: 0.5em;
+        text-align: center;
+        font-weight: 800;
+        font-size: 120%;
+    
+        td{
+            max-width: 40%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+           
+            th{ 
+                border: 0.1em solid $color-white;
+                text-align: left;
+                padding: 0.2em; 
+            }   
+        }
+    
+        tr:nth-child(even){
+            background-color: $color-background;
+        }
+    }
+}

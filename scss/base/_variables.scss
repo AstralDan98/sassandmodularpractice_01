@@ -1,0 +1,28 @@
+//Colours//
+
+$color-primary: hsl(229, 85%, 60%); 
+$color-primary-light: hsl(229, 85%, 70%);
+$color-primary-lighter: hsl(229, 85%, 80%);
+
+$color-secondary: hsl(41, 100%, 60%);
+$color-secondary-dark: hsl(41, 100%, 50%);
+$color-secondary-darker: hsl(41, 100%, 40%);
+
+$color-white: hsl(0, 0%, 100%); 
+$color-white-dark: hsl(0, 0%, 80%);
+$color-white-darker: hsl(0, 0%, 60%); 
+
+$color-grey: hsl(0, 0%, 50%); 
+
+$color-black-brighter: hsl(0, 0%, 40%);
+$color-black-bright: hsl(0, 0%, 20%);
+$color-black: hsl(0, 0%, 0%);
+
+$color-background: hsl(226, 70%, 60%);
+
+
+//Font Families//
+
+$main-font: 'Ubuntu:700,7001';
+$main-font-condensed: 'Ubuntu+Condensed:400';
+$secondary-font:'Montserrat';

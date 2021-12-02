@@ -1,0 +1,12 @@
+.logo{
+    width: max-content;
+    
+    svg{
+        height: 3em;
+        width: 3em;      
+
+        & path{
+            fill:hsl(41, 98%, 60%);
+        }
+    }
+}
