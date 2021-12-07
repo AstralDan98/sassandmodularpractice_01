@@ -359,6 +359,13 @@ ol, ul {
   padding-left: 0;
 }
 
+/* Inputs
+==============================================================================*/
+input {
+  padding: 0;
+  margin: 0;
+}
+
 h1, h2, h3, h4, h5, h6, a, p {
   color: white;
 }
@@ -441,7 +448,7 @@ footer {
 }
 .menu svg:hover {
   cursor: pointer;
-  fill: #a1b1f7;
+  color: #a1b1f7;
 }
 .menu svg path {
   fill: #ffbe33;
@@ -476,7 +483,7 @@ footer {
 
 .tabs {
   margin: 0;
-  background: gray;
+  background: #7189f4;
   display: flex;
   justify-content: left;
   align-items: center;
@@ -495,7 +502,7 @@ footer {
   justify-content: center;
   align-items: center;
   font-size: 1em;
-  font-family: "Ubuntu+Condensed:400";
+  font-family: "Ubuntu+Condensed";
   overflow: hidden;
 }
 
@@ -515,13 +522,25 @@ button.tablinks.active {
 
 .crud {
   display: flex;
-  justify-content: space-between;
-  width: 100%;
 }
 
+.crud__table, .crud__form {
+  font-family: "Ubuntu";
+  color: white;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 120%;
+}
+
+.crud__form {
+  width: 95%;
+}
 .crud__form input {
   width: 100%;
   text-align: center;
+  padding: 0.1em 0;
 }
 .crud__form .crud__form-element, .crud__form .crud__form-element-lable {
   margin: 0.5em;
@@ -529,23 +548,35 @@ button.tablinks.active {
 .crud__form .crud__form-four-columns {
   display: flex;
   flex-direction: row;
+}
+.crud__form .crud__form-four-columns .crud__form-element .crud__form-four-columns {
   width: 24%;
 }
 .crud__form .crud__form-four-columns input {
-  border-radius: 0.5em;
+  border-radius: 0.2em;
+  border-style: none;
+}
+.crud__form .crud__form-four-columns input:focus {
+  outline: none;
 }
 .crud__form .crud__form-three-columns {
   display: flex;
   flex-direction: row;
   margin: 1em 0;
-  width: 32%;
+}
+.crud__form .crud__form-three-columns input:focus {
+  outline: none;
+}
+.crud__form .crud__form-three-columns select {
+  border-radius: 0.5em;
+  min-width: 100%;
+  text-align: center;
 }
 .crud__form .crud__form-two-columns {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   margin: 1em 0;
-  width: 49%;
   justify-content: space-between;
 }
 .crud__form .crud__form-two-columns input {
@@ -554,42 +585,58 @@ button.tablinks.active {
 .crud__form .crud__form-one-column {
   display: flex;
   flex-direction: row;
-  width: 100%;
-  font-family: "Ubuntu:700,7001";
-  color: white;
-  border-collapse: collapse;
-  padding: 0.5em;
-  text-align: center;
-  font-weight: 800;
-  font-size: 120%;
 }
-.crud__form .crud__form-one-column textarea {
+.crud__form .crud__form-one-column .crud__form-element {
   width: 100%;
-  border-radius: 0.5em;
 }
-.crud__form .crud__table {
-  font-family: "Ubuntu:700,7001";
-  color: white;
-  border-collapse: collapse;
+.crud__form .crud__form-one-column .crud__form-element textarea {
   width: 100%;
-  padding: 0.5em;
-  text-align: center;
-  font-weight: 800;
-  font-size: 120%;
+  border-radius: 0.2em;
 }
-.crud__form .crud__table td {
+.crud__form .crud__form-one-column .crud__form-element textarea:focus {
+  outline: none;
+}
+
+.crud__table {
+  width: 95%;
+}
+.crud__table table {
+  min-width: 95%;
+}
+.crud__table td {
+  border: 0.1em solid white;
+  text-align: left;
+  padding: 0.2em;
   max-width: 40%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.crud__form .crud__table td th {
+.crud__table td th {
   border: 0.1em solid white;
   text-align: left;
   padding: 0.2em;
 }
-.crud__form .crud__table tr:nth-child(even) {
+.crud__table tr:nth-child(even) {
   background-color: #5273e0;
+}
+
+.crud__submit {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: "Ubuntu";
+  border: none;
+  max-width: 25%;
+  height: 2em;
+  border-radius: 1em;
+  margin-left: 0.5em;
+}
+.crud__submit:hover {
+  cursor: pointer;
+  background-color: #cccccc;
+}
+.crud__submit:focus {
+  background-color: #999999;
 }
 
 .footer-element {

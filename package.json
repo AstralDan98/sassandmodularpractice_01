@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "ckeditor5": "^31.1.0",
+    "clientjs": "^0.2.1"
+  }
+}

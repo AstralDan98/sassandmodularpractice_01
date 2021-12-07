@@ -1,14 +1,25 @@
 .crud{
     display: flex;
-    justify-content: space-between;
-    width: 100%;  
 }
 
-.crud__form{ 
+.crud__table, .crud__form{ 
+    font-family: $main-font;
+    color: $color-white;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    font-size: 120%;
+
+}
+
+.crud__form{
+    width: 95%;
  
     input{
         width: 100%;
         text-align: center;
+        padding: 0.1em 0;
     }
 
     
@@ -19,10 +30,18 @@
     .crud__form-four-columns{
         display: flex;
         flex-direction: row;
+        
+        .crud__form-element .crud__form-four-columns{
         width: 24%;
+        }
         
         input{
-            border-radius: 0.5em;
+            border-radius: 0.2em;
+            border-style: none;
+        }
+
+        input:focus{
+            outline: none;
         }
     }
 
@@ -30,7 +49,17 @@
         display: flex;
         flex-direction: row;
         margin: 1em 0;
-        width: 32%;
+
+        input:focus{
+            outline: none;
+        }
+
+        select{
+            border-radius: 0.5em;
+            min-width: 100%;
+            text-align: center;
+
+        }
     }
 
     .crud__form-two-columns{
@@ -38,9 +67,8 @@
         flex-direction: row;
         flex-wrap: nowrap;
         margin: 1em 0;
-        width: 49%;
-        justify-content:space-between;
-        
+        justify-content: space-between;
+
         input{
             width: auto;
         }
@@ -49,47 +77,66 @@
     .crud__form-one-column{
         display: flex;
         flex-direction: row;
-        width: 100%;
-        font-family: $main-font;
-        color: $color-white;
-        border-collapse: collapse;
-        padding: 0.5em;
-        text-align: center;
-        font-weight: 800;
-        font-size: 120%;
-        
-        textarea{
+
+        .crud__form-element{
             width: 100%;
-            border-radius: 0.5em;
-        }
-    }
 
-    .crud__table{ 
+            textarea{
+                width: 100%;
+                border-radius: 0.2em;
+            }
 
-        font-family: $main-font;
-        color: $color-white;
-        border-collapse: collapse;
-        width: 100%;
-        padding: 0.5em;
-        text-align: center;
-        font-weight: 800;
-        font-size: 120%;
-    
-        td{
-            max-width: 40%;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-           
-            th{ 
-                border: 0.1em solid $color-white;
-                text-align: left;
-                padding: 0.2em; 
-            }   
-        }
-    
-        tr:nth-child(even){
-            background-color: $color-background;
+            textarea:focus{
+                outline: none;
+            }
         }
     }
 }
+
+.crud__table{ 
+    width: 95%;
+
+    table{
+        min-width: 95%;
+    }
+
+    td{
+        border: 0.1em solid $color-white;
+        text-align: left;
+        padding: 0.2em; 
+        max-width: 40%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        
+        th{ 
+            border: 0.1em solid $color-white;
+            text-align: left;
+            padding: 0.2em; 
+        }   
+    }
+
+    tr:nth-child(even){
+        background-color: $color-background;
+    }
+}
+
+.crud__submit{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: $main-font;
+    border: none;
+    max-width: 25%;
+    height: 2em;
+    border-radius: 1em;
+    margin-left: 0.5em;
+
+    &:hover{
+        cursor: pointer;
+        background-color: $color-white-dark;
+    }
+
+    &:focus{
+        background-color: $color-white-darker;
+    }
+}   
