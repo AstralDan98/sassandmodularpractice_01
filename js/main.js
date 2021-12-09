@@ -1,5 +1,7 @@
 import {menuTabs} from './tabs.js';
-import {clientData} from './client.js';
+import {form} from './form.js';
+import {renderCkeditor} from './ckeditor.js';
 
 menuTabs();
-clientData();
+form();
+renderCkeditor();

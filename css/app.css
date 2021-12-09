@@ -639,6 +639,13 @@ button.tablinks.active {
   background-color: #999999;
 }
 
+.crud__form-element .ck-editor__editable {
+  height: 20vh;
+}
+.crud__form-element .ck-editor__editable p {
+  color: black;
+}
+
 .footer-element {
   width: 100%;
 }

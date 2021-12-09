@@ -103,7 +103,7 @@
                                         <div class="crud__form-element-lable">
                                             <lable>Days staying</lable>    
                                         </div>                              
-                                        <input type="number" id="quantity" name="quantity" min="0zº" max="10" value="1">
+                                        <input type="number" id="days" name="days" min="0" max="10" value="1">
                                     </div>
                                     <div class="crud__form-element"><lable>License Photo</lable>   
                                     <input type="file">
@@ -111,10 +111,20 @@
                                     <div class="crud__form-element"><lable>Allergies?</lable>
                                     <select name="answer" id="answer">
                                         <option value="yes">Yes</option>
-                                        <option value="yesnt">No</option>
+                                        <option value="no">No</option>
                                     </select>
                                     </div>
                                 </div>    
+                                <div class="crud__form-destination">
+                                    <div class="island-group">
+                                        <input type="radio" name="BalearicIsles" value="Baleares"></input>
+                                        <lable>Illes Baleares</lable>
+                                    </div>
+                                    <div class="island-group">
+                                        <input type="radio" name="CanarianIsles" value="Canarias"></input>
+                                        <lable>Islas Canarias</lable>
+                                    </div>
+                                </div>
                             </div>      
                             <div id="dstnInfo" class= "tabcontent">    
                                 <div class="crud__form-two-columns">
@@ -158,9 +168,12 @@
                                     <div class="crud__form-element">
                                         <div class="crud__form-element-lable">
                                             <lable>Other things you may need</lable>
-
                                             <div class="crud__form-element">
-                                                <textarea id="textarea" rows="10" cols="50"></textarea>
+                                                <textarea id="special_needs" name="Needs" rows="10" cols="50" class="ckeditors"></textarea>
+                                            </div>
+                                            <lable>Other comentaries</lable>
+                                            <div class="crud__form-element">
+                                                <textarea id="other_needs" name="Comments" rows="10" cols="50" class="ckeditors"></textarea>
                                             </div>
                                         </div>    
                                     </div>   
@@ -184,7 +197,6 @@
          
         <script src="node_modules\clientjs\dist\client.min.js"></script>
         <script type="module" src="js/main.js"></script>
-
         <!-- vv Script para añadir fuentes vía JavaScript vv -->
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
         <script>

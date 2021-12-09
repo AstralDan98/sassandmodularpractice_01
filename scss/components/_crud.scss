@@ -140,3 +140,10 @@
         background-color: $color-white-darker;
     }
 }   
+
+.crud__form-element .ck-editor__editable{
+    height: 20vh;
+    p{
+        color: black;
+    }
+}
